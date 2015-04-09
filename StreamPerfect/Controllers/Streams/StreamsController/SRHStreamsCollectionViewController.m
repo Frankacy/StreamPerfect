@@ -46,6 +46,17 @@ NSString* const SRHMiniStreamCellReuseIdentifier = @"SRHMiniStreamCell";
 
 #pragma mark - Lifecycle
 
+- (void)loadView {
+    [super loadView];
+    
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    refreshControl.tintColor = [UIColor srhPurpleColor];
+    refreshControl.rac_command = self.viewModel.updateContentCommand;
+    [self.collectionView addSubview:refreshControl];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
