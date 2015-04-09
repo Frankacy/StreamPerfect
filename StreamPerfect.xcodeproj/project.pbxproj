@@ -93,7 +93,6 @@
 		41A22BD81960CA3E00497A10 /* SRHStreamsCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A22BD71960CA3E00497A10 /* SRHStreamsCollectionFlowLayout.m */; };
 		41A22BE119622BB400497A10 /* SRHStreamDetailsHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A22BE019622BB400497A10 /* SRHStreamDetailsHeader.m */; };
 		41A22BE41962305000497A10 /* SRHRaceStreamsCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A22BE31962305000497A10 /* SRHRaceStreamsCollectionController.m */; };
-		41A22BE71962324800497A10 /* SRHRaceCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A22BE61962324800497A10 /* SRHRaceCellViewModel.m */; };
 		41A48C9719357CC60038A7F9 /* SRHRaceStreamsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A48C9619357CC60038A7F9 /* SRHRaceStreamsViewModel.m */; };
 		41A48C9F1935851D0038A7F9 /* SRHMasterContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A48C9E1935851D0038A7F9 /* SRHMasterContainerViewController.m */; };
 		41A48CA419358AE10038A7F9 /* PH25.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A48CA219358AE10038A7F9 /* PH25.png */; };
@@ -262,8 +261,6 @@
 		41A22BE019622BB400497A10 /* SRHStreamDetailsHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHStreamDetailsHeader.m; sourceTree = "<group>"; };
 		41A22BE21962305000497A10 /* SRHRaceStreamsCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHRaceStreamsCollectionController.h; sourceTree = "<group>"; };
 		41A22BE31962305000497A10 /* SRHRaceStreamsCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHRaceStreamsCollectionController.m; sourceTree = "<group>"; };
-		41A22BE51962324800497A10 /* SRHRaceCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHRaceCellViewModel.h; sourceTree = "<group>"; };
-		41A22BE61962324800497A10 /* SRHRaceCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHRaceCellViewModel.m; sourceTree = "<group>"; };
 		41A48C9519357CC60038A7F9 /* SRHRaceStreamsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHRaceStreamsViewModel.h; sourceTree = "<group>"; };
 		41A48C9619357CC60038A7F9 /* SRHRaceStreamsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHRaceStreamsViewModel.m; sourceTree = "<group>"; };
 		41A48C9D1935851D0038A7F9 /* SRHMasterContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHMasterContainerViewController.h; sourceTree = "<group>"; };
@@ -758,8 +755,6 @@
 			children = (
 				41A8A33B191C6C650015F8D7 /* SRHRaceCell.h */,
 				41A8A33C191C6C650015F8D7 /* SRHRaceCell.m */,
-				41A22BE51962324800497A10 /* SRHRaceCellViewModel.h */,
-				41A22BE61962324800497A10 /* SRHRaceCellViewModel.m */,
 			);
 			path = RaceCell;
 			sourceTree = "<group>";
@@ -1003,7 +998,6 @@
 				41A8A332191C66D10015F8D7 /* SRHRacesViewModel.m in Sources */,
 				412DB6CB1915553800049BC9 /* SRHStreamer.m in Sources */,
 				412DB6F21915E47300049BC9 /* SRHStreamDetailsViewController.m in Sources */,
-				41A22BE71962324800497A10 /* SRHRaceCellViewModel.m in Sources */,
 				412DB6FF1917145C00049BC9 /* SRHStreamsSectionViewModel.m in Sources */,
 				412DB6C81915541300049BC9 /* SRHGame.m in Sources */,
 				417B2AAD19BBE45700A177F8 /* SRHAttributionFooterView.m in Sources */,

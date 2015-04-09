@@ -9,7 +9,6 @@
 #import "RVMViewModel.h"
 
 @class SRHRace;
-@class SRHRaceCellViewModel;
 
 @interface SRHRacesViewModel : RVMViewModel
 
@@ -21,7 +20,6 @@
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfRowsInSection:(NSInteger)section;
 - (SRHRace *)itemAtIndexPath:(NSIndexPath *)indexPath;
-- (SRHRaceCellViewModel *)viewModelForItemAtIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)titleForHeaderInSection:(NSInteger)section;
 - (UIImage *)iconForHeaderInSection:(NSInteger)section;
 

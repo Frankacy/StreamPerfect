@@ -7,6 +7,8 @@
 //
 
 #import "SRHGame.h"
+#import "NSString+URLEncode.h"
+
 #import <RestKit/RestKit.h>
 
 @implementation SRHGame
@@ -26,6 +28,39 @@
     }
     
     return self.name;
+}
+
+- (void)getArtworkURLWithCompletion:(void(^)(NSURL *artworkURL))completion {
+    NSString *blandGameName = [self.name stringByReplacingOccurrencesOfString:@" (PC)" withString:@""];
+    NSString *safeGameName = [blandGameName URLEncode];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.giantbomb.com/search/?api_key=1876a513878592d6929436aff3b97778cfaf109d&query=%@&field_list=name,image&format=json",safeGameName]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+                                                                                        success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                                                                            NSURL *boxArtURL = [NSURL URLWithString:[self parseBoxArtJson:JSON]];
+                                                                                            completion(boxArtURL);
+                                                                                        }
+                                                                                        failure:nil];
+    [operation start];
+}
+
+- (NSString *)parseBoxArtJson:(id)JSON
+{
+    NSString* boxArtUrl = @"";
+    
+    if([JSON isKindOfClass:[NSDictionary class]])
+    {
+        NSDictionary* results = (NSDictionary *)JSON;
+        if ([[results objectForKey:@"number_of_total_results"] integerValue] > 0)
+        {
+            if([[[[results objectForKey:@"results"] objectAtIndex:0] objectForKey:@"image"] valueForKey:@"icon_url"] != [NSNull null])
+            {
+                boxArtUrl = [[[[results objectForKey:@"results"] objectAtIndex:0] objectForKey:@"image"] valueForKey:@"icon_url"];
+            }
+        }
+    }
+    
+    return boxArtUrl;
 }
 
 + (RKObjectMapping *)objectMappingForTwitchAPI {

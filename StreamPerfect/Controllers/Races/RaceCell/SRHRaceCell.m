@@ -7,7 +7,6 @@
 //
 
 #import "SRHRaceCell.h"
-#import "SRHRaceCellViewModel.h"
 #import "UIColor+SRHColors.h"
 #import "SRHRace.h"
 #import "SRHGame.h"
@@ -124,7 +123,12 @@
 - (void)updateContent {
     self.goalLabel.text = self.race.goal;
     self.gameLabel.text = self.race.game.name;
-    [self.gameImageView sd_setImageWithURL:[self.race.game boxArtURL]];
+    
+    [self.race.game getArtworkURLWithCompletion:^(NSURL *artworkURL) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.gameImageView sd_setImageWithURL:artworkURL];
+        });
+    }];
 }
 
 @end

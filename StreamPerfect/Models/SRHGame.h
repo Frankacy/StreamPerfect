@@ -19,6 +19,7 @@
 @property(nonatomic, assign) NSInteger SRLPopularityRank;
 
 - (NSString *)shortName;
+- (void)getArtworkURLWithCompletion:(void(^)(NSURL *artworkURL))completion;
 
 + (RKObjectMapping *)objectMappingForTwitchAPI;
 + (RKObjectMapping *)objectMappingForTwitchTeamAPI;

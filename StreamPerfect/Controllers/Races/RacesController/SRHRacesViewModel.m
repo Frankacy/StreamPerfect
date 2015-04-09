@@ -7,7 +7,6 @@
 //
 
 #import "SRHRacesViewModel.h"
-#import "SRHRaceCellViewModel.h"
 #import "SRHRacesSectionViewModel.h"
 #import "SRHNetworkRequests.h"
 #import "SRHRace.h"
@@ -85,13 +84,6 @@
 -(SRHRace *)itemAtIndexPath:(NSIndexPath *)indexPath {
     SRHRacesSectionViewModel *viewModel = self.sectionViewModels[indexPath.section];
     return viewModel.races[indexPath.row];
-}
-
--(SRHRaceCellViewModel *)viewModelForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SRHRacesSectionViewModel *viewModel = self.sectionViewModels[indexPath.section];
-    SRHRace *race = viewModel.races[indexPath.item];
-    
-    return [[SRHRaceCellViewModel alloc] initWithRace:race];
 }
 
 - (NSString *)titleForHeaderInSection:(NSInteger)section {
