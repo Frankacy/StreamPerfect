@@ -8,7 +8,6 @@
 
 #import "SRHStreamsCollectionViewController.h"
 #import "SRHStreamsViewModel.h"
-#import "SRHStreamDetailsViewModel.h"
 #import "SRHStreamDetailsViewController.h"
 #import "SRHStreamsCollectionHeader.h"
 #import "SRHStreamCell.h"
@@ -164,7 +163,6 @@ NSString* const SRHMiniStreamCellReuseIdentifier = @"SRHMiniStreamCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     SRHStream *stream = [self.viewModel itemAtIndexPath:indexPath];
-    SRHStreamDetailsViewModel *viewModel = [[SRHStreamDetailsViewModel alloc] initWithStream:stream];
     [self sendAnalyticsForStream:stream];
     
     [self.navigationController pushViewController:[[SRHStreamDetailsViewController alloc] initWithStream:stream]

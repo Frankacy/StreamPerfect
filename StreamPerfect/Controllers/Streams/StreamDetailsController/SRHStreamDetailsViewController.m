@@ -7,7 +7,6 @@
 //
 
 #import "SRHStreamDetailsViewController.h"
-#import "SRHStreamDetailsViewModel.h"
 #import "SRHStreamDetailsHeader.h"
 #import "SRHStreamDetailsWebViewController.h"
 #import "SRHStyleFactory.h"

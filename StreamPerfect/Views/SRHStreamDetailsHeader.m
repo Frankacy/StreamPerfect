@@ -7,7 +7,6 @@
 //
 
 #import "SRHStreamDetailsHeader.h"
-#import "SRHStreamDetailsViewModel.h"
 #import "UIColor+SRHColors.h"
 #import "SRHAccountManager.h"
 

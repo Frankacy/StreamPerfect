@@ -50,7 +50,6 @@
 		412DB6E8191587E000049BC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412DB6E7191587E000049BC9 /* QuartzCore.framework */; };
 		412DB6ED19159A4200049BC9 /* SRHStreamsCollectionViewController+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6EC19159A4200049BC9 /* SRHStreamsCollectionViewController+View.m */; };
 		412DB6F21915E47300049BC9 /* SRHStreamDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6F11915E47300049BC9 /* SRHStreamDetailsViewController.m */; };
-		412DB6F51915E4FE00049BC9 /* SRHStreamDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6F41915E4FE00049BC9 /* SRHStreamDetailsViewModel.m */; };
 		412DB6F91916C6F000049BC9 /* SRHStreamsCollectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6F81916C6F000049BC9 /* SRHStreamsCollectionHeader.m */; };
 		412DB6FF1917145C00049BC9 /* SRHStreamsSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6FE1917145C00049BC9 /* SRHStreamsSectionViewModel.m */; };
 		412DB70219172F0300049BC9 /* SRHNetworkRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB70119172F0300049BC9 /* SRHNetworkRequests.m */; };
@@ -194,8 +193,6 @@
 		412DB6EE19159E2200049BC9 /* CGRectPositioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGRectPositioning.h; sourceTree = "<group>"; };
 		412DB6F01915E47300049BC9 /* SRHStreamDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHStreamDetailsViewController.h; sourceTree = "<group>"; };
 		412DB6F11915E47300049BC9 /* SRHStreamDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHStreamDetailsViewController.m; sourceTree = "<group>"; };
-		412DB6F31915E4FE00049BC9 /* SRHStreamDetailsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHStreamDetailsViewModel.h; sourceTree = "<group>"; };
-		412DB6F41915E4FE00049BC9 /* SRHStreamDetailsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHStreamDetailsViewModel.m; sourceTree = "<group>"; };
 		412DB6F71916C6F000049BC9 /* SRHStreamsCollectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHStreamsCollectionHeader.h; sourceTree = "<group>"; };
 		412DB6F81916C6F000049BC9 /* SRHStreamsCollectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHStreamsCollectionHeader.m; sourceTree = "<group>"; };
 		412DB6FD1917145C00049BC9 /* SRHStreamsSectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHStreamsSectionViewModel.h; sourceTree = "<group>"; };
@@ -408,8 +405,6 @@
 			children = (
 				412DB6F01915E47300049BC9 /* SRHStreamDetailsViewController.h */,
 				412DB6F11915E47300049BC9 /* SRHStreamDetailsViewController.m */,
-				412DB6F31915E4FE00049BC9 /* SRHStreamDetailsViewModel.h */,
-				412DB6F41915E4FE00049BC9 /* SRHStreamDetailsViewModel.m */,
 			);
 			path = StreamDetailsController;
 			sourceTree = "<group>";
@@ -1009,7 +1004,6 @@
 				41A22BD5195F975D00497A10 /* SRHMiniStreamCell.m in Sources */,
 				41A8A336191C6AE70015F8D7 /* SRHRacesSectionViewModel.m in Sources */,
 				41A22BE119622BB400497A10 /* SRHStreamDetailsHeader.m in Sources */,
-				412DB6F51915E4FE00049BC9 /* SRHStreamDetailsViewModel.m in Sources */,
 				412DB6DD1915656900049BC9 /* SRHStreamsCollectionViewController.m in Sources */,
 				412DB6D11915595900049BC9 /* UIColor+SRHColors.m in Sources */,
 			);

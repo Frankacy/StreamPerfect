@@ -8,7 +8,6 @@
 
 #import "SRHRaceStreamsCollectionController.h"
 #import "SRHRaceStreamsViewModel.h"
-#import "SRHStreamDetailsViewModel.h"
 #import "SRHStreamDetailsViewController.h"
 #import "SRHRaceStreamsHeader.h"
 #import "UIColor+SRHColors.h"
@@ -144,7 +143,6 @@ NSString* const SRHRaceStreamCellReuseIdentifier = @"SRHRaceStreamCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     SRHStream *stream = [self.viewModel itemAtIndexPath:indexPath];
-    SRHStreamDetailsViewModel *viewModel = [[SRHStreamDetailsViewModel alloc] initWithStream:stream];
     [self sendAnalyticsForRaceStream:stream];
     
     [self.navigationController pushViewController:[[SRHStreamDetailsViewController alloc] initWithStream:stream]
