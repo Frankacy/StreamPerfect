@@ -7,8 +7,11 @@
 //
 
 #import "SRHMiniStreamCell.h"
-#import "SRHStreamCellViewModel.h"
 #import "UIColor+SRHColors.h"
+#import "SRHStream.h"
+#import "SRHStreamer.h"
+#import "SRHGame.h"
+
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <Masonry/Masonry.h>
 
@@ -25,19 +28,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setupCell];
-        
-        RAC(self, self.cellTitleLabel.attributedText) = RACObserve(self, self.viewModel.cellStreamTitle);
-        
-        [RACObserve(self, self.viewModel.cellStreamPreviewImageURL) subscribeNext:^(NSURL *url) {
-            [self.previewImageView sd_setImageWithURL:url];
-        }];
     }
     return self;
-}
-
-- (void)setViewModel:(SRHStreamCellViewModel *)viewModel {
-    _viewModel = viewModel;
-    
 }
 
 - (void)setupCell {
@@ -85,6 +77,35 @@
     [self.contentView.layer setShadowOffset:CGSizeMake(1.0f,4.0f)];
     [self.contentView.layer setShadowOpacity:1.0];
     [self.contentView.layer setShadowRadius:0.0];
+}
+
+- (void)setStream:(SRHStream *)stream {
+    if (_stream != stream) {
+        _stream = stream;
+        
+        [self updateContent];
+    }
+}
+
+- (void)updateContent {
+    self.cellTitleLabel.attributedText = [self attributedCellTitleWithStreamer:self.stream.streamer
+                                                                          game:self.stream.game];
+    [self.previewImageView sd_setImageWithURL:self.stream.currentThumbnail];
+}
+
+- (NSAttributedString *)attributedCellTitleWithStreamer:(SRHStreamer *)streamer game:(SRHGame *)game {
+   NSMutableAttributedString *cellTitle = [[NSMutableAttributedString alloc] init];
+   [cellTitle appendAttributedString:[[NSAttributedString alloc] initWithString:streamer.name
+                                                                     attributes:@{ NSFontAttributeName : [UIFont fontWithName:@"Bariol-Bold" size:17.0],
+                                                                                   NSForegroundColorAttributeName : [UIColor srhBlueGrayColor]}]];
+   [cellTitle appendAttributedString:[[NSAttributedString alloc] initWithString:@" playing\n"
+                                                                     attributes:@{ NSFontAttributeName : [UIFont fontWithName:@"Bariol-Regular" size:15.0],
+                                                                                   NSForegroundColorAttributeName : [UIColor srhBlueGrayColor]}]];
+   [cellTitle appendAttributedString:[[NSAttributedString alloc] initWithString:game.name ? [[game shortName] uppercaseString] : @"Something"
+                                                                     attributes:@{ NSFontAttributeName : [UIFont fontWithName:@"Montserrat" size:15.0],
+                                                                                   NSForegroundColorAttributeName : [UIColor srhDarkBlueColor]}]];
+   
+   return [cellTitle copy];
 }
 
 - (void)prepareForReuse {

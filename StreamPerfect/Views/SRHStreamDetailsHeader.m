@@ -54,57 +54,57 @@
     
     UIImageView *avatarImageView = [[UIImageView alloc] init];
     [avatarImageView sd_setImageWithURL:self.stream.streamer.avatarURL];
-    [self addSubview:self.avatarImageView];
+    [self addSubview:avatarImageView];
     self.avatarImageView = avatarImageView;
     
     UILabel *mainTitleLabel = [[UILabel alloc] init];
     mainTitleLabel.textColor = [UIColor srhDarkBlueColor];
     mainTitleLabel.attributedText = [self headerTitleWithStreamer:self.stream.streamer game:self.stream.game];
     mainTitleLabel.font = [UIFont fontWithName:@"Montserrat-Bold" size:22.0];
-    [self addSubview:self.mainTitleLabel];
+    [self addSubview:mainTitleLabel];
     self.mainTitleLabel = mainTitleLabel;
     
     UILabel *streamTitleLabel = streamTitleLabel = [[UILabel alloc] init];
     streamTitleLabel.textColor = [UIColor srhBlueGrayColor];
     streamTitleLabel.text = self.stream.title;
     streamTitleLabel.font = [UIFont fontWithName:@"Bariol-Regular" size:18.0];
-    [self addSubview:self.streamTitleLabel];
+    [self addSubview:streamTitleLabel];
     self.streamTitleLabel = streamTitleLabel;
     
     UIImageView *streamTitleIconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"popular_section_arrows"]];
-    [self addSubview:self.streamTitleIconImageView];
+    [self addSubview:streamTitleIconImageView];
     self.streamTitleIconImageView = streamTitleIconImageView;
     
     UILabel *followerNumberLabel = [[UILabel alloc] init];
     followerNumberLabel.textColor = [UIColor srhPurpleColor];
     followerNumberLabel.font = [UIFont fontWithName:@"Montserrat-Bold" size:20.0];
     followerNumberLabel.text = [NSString stringWithFormat:@"%ld", (long)self.stream.streamer.followerCount];
-    [self addSubview:self.followerNumberLabel];
+    [self addSubview:followerNumberLabel];
     self.followerNumberLabel = followerNumberLabel;
     
     UILabel *followerTitleLabel = [[UILabel alloc] init];
     followerTitleLabel.textColor = [UIColor srhBlueGrayColor];
     followerTitleLabel.font = [UIFont fontWithName:@"Bariol-Regular" size:14.0];
     followerTitleLabel.text = self.stream.streamer.followerCount == 1 ? @"follower" : @"followers";
-    [self addSubview:self.followerTitleLabel];
+    [self addSubview:followerTitleLabel];
     self.followerTitleLabel = followerTitleLabel;
     
     UILabel *viewersNumberLabel = [[UILabel alloc] init];
     viewersNumberLabel.textColor = [UIColor srhPurpleColor];
     viewersNumberLabel.font = [UIFont fontWithName:@"Montserrat-Bold" size:20.0];
     viewersNumberLabel.text = [NSString stringWithFormat:@"%ld", (long)self.stream.currentViewerCount + 1];
-    [self addSubview:self.viewersNumberLabel];
+    [self addSubview:viewersNumberLabel];
     self.viewersNumberLabel = viewersNumberLabel;
     
     UILabel *viewersTitleLabel = [[UILabel alloc] init];
     viewersTitleLabel.textColor = [UIColor srhBlueGrayColor];
     viewersTitleLabel.font = [UIFont fontWithName:@"Bariol-Regular" size:14.0];
     viewersTitleLabel.text = self.stream.currentViewerCount == 0 ? @"viewer" : @"viewers";
-    [self addSubview:self.viewersTitleLabel];
+    [self addSubview:viewersTitleLabel];
     self.viewersTitleLabel = viewersTitleLabel;
     
     UIImageView *barImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"live_streams_section_bar"]];
-    [self addSubview:self.barImageView];
+    [self addSubview:barImageView];
     self.barImageView = barImageView;
     
     [self.mainTitleLabel setContentCompressionResistancePriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
@@ -115,7 +115,7 @@
     [self.viewersTitleLabel setContentCompressionResistancePriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
     
     [self.avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.and.left.equalTo(self.avatarImageView.superview);
+        make.top.and.left.equalTo(self);
         make.bottom.equalTo(self.barImageView.mas_top);
         make.width.equalTo(self.avatarImageView.mas_height);
     }];

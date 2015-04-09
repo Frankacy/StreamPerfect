@@ -154,13 +154,11 @@ NSString* const SRHMiniStreamCellReuseIdentifier = @"SRHMiniStreamCell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    RVMViewModel *cellViewModel = [self.viewModel viewModelForItemAtIndexPath:indexPath];
-    
     SRHStreamCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier: indexPath.section == 0 ?
                                                                                        SRHStreamCellReuseIdentifier :
                                                                                        SRHMiniStreamCellReuseIdentifier
                                                                          forIndexPath:indexPath];
-    cell.viewModel = cellViewModel;
+    cell.stream = [self.viewModel itemAtIndexPath:indexPath];
     
     return cell;
 }

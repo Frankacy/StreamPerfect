@@ -50,7 +50,7 @@
     self.header = header;
     
     SRHStreamDetailsWebViewController *webView = [[SRHStreamDetailsWebViewController alloc] initWithStream:self.stream];
-    [self.view addSubview:self.webView.view];
+    [self.view addSubview:webView.view];
     self.webView = webView;
 }
 
@@ -58,13 +58,13 @@
     [super viewDidLoad];
     
     [self.header mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.and.right.equalTo(self.header.superview);
+        make.top.left.and.right.equalTo(self.view);
         make.height.equalTo(@125);
     }];
     
     [self.webView.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.header.mas_bottom);
-        make.left.bottom.and.right.equalTo(self.webView.view.superview);
+        make.left.bottom.and.right.equalTo(self.view);
     }];
     
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
