@@ -38,7 +38,6 @@
 		4124EA0F198425C3006242C4 /* AdelleSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4124EA0E198425C3006242C4 /* AdelleSans-Light.otf */; };
 		4124EA121985678E006242C4 /* SRHSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 4124EA111985678E006242C4 /* SRHSettings.m */; };
 		4126BE6E196321BA00820E78 /* SRHRaceStreamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4126BE6D196321BA00820E78 /* SRHRaceStreamCell.m */; };
-		4126BE711963227F00820E78 /* SRHRaceStreamCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4126BE701963227F00820E78 /* SRHRaceStreamCellViewModel.m */; };
 		412DB6C21915517200049BC9 /* SRHRestKitConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6C11915517200049BC9 /* SRHRestKitConfigurator.m */; };
 		412DB6C5191552C200049BC9 /* SRHStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6C4191552C200049BC9 /* SRHStream.m */; };
 		412DB6C81915541300049BC9 /* SRHGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6C71915541300049BC9 /* SRHGame.m */; };
@@ -170,8 +169,6 @@
 		4124EA111985678E006242C4 /* SRHSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHSettings.m; sourceTree = "<group>"; };
 		4126BE6C196321BA00820E78 /* SRHRaceStreamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHRaceStreamCell.h; sourceTree = "<group>"; };
 		4126BE6D196321BA00820E78 /* SRHRaceStreamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHRaceStreamCell.m; sourceTree = "<group>"; };
-		4126BE6F1963227F00820E78 /* SRHRaceStreamCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHRaceStreamCellViewModel.h; sourceTree = "<group>"; };
-		4126BE701963227F00820E78 /* SRHRaceStreamCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHRaceStreamCellViewModel.m; sourceTree = "<group>"; };
 		412DB6C01915517200049BC9 /* SRHRestKitConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHRestKitConfigurator.h; sourceTree = "<group>"; };
 		412DB6C11915517200049BC9 /* SRHRestKitConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHRestKitConfigurator.m; sourceTree = "<group>"; };
 		412DB6C3191552C200049BC9 /* SRHStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHStream.h; sourceTree = "<group>"; };
@@ -345,8 +342,6 @@
 			children = (
 				4126BE6C196321BA00820E78 /* SRHRaceStreamCell.h */,
 				4126BE6D196321BA00820E78 /* SRHRaceStreamCell.m */,
-				4126BE6F1963227F00820E78 /* SRHRaceStreamCellViewModel.h */,
-				4126BE701963227F00820E78 /* SRHRaceStreamCellViewModel.m */,
 			);
 			path = RaceStreamCell;
 			sourceTree = "<group>";
@@ -998,7 +993,6 @@
 				41E33FCB19BB4BD40043BB30 /* SRHStyleFactory.m in Sources */,
 				412DB6CE191557E200049BC9 /* SRHRace.m in Sources */,
 				418957B519B0ED6D00731F91 /* CCBSegmentedControl.m in Sources */,
-				4126BE711963227F00820E78 /* SRHRaceStreamCellViewModel.m in Sources */,
 				4126BE6E196321BA00820E78 /* SRHRaceStreamCell.m in Sources */,
 				4155DA34198EA79200847B17 /* SRHAccountManager.m in Sources */,
 				412DB6E51915702900049BC9 /* SRHStreamCell.m in Sources */,

@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class SRHRaceStreamCellViewModel;
+@class SRHStream;
 
 @interface SRHRaceStreamCell : UICollectionViewCell
 
-@property(nonatomic, strong) SRHRaceStreamCellViewModel *viewModel;
+@property(nonatomic, weak) SRHStream *stream;
 
 @end

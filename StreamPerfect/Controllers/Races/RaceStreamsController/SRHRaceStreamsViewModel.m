@@ -7,7 +7,6 @@
 //
 
 #import "SRHRaceStreamsViewModel.h"
-#import "SRHRaceStreamCellViewModel.h"
 #import "SRHNetworkRequests.h"
 #import "SRHStream.h"
 #import "SRHRace.h"
@@ -67,12 +66,6 @@
 
 -(SRHStream *)itemAtIndexPath:(NSIndexPath *)indexPath {
     return self.raceStreams[indexPath.item];
-}
-
--(SRHRaceStreamCellViewModel *)viewModelForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SRHStream *stream = self.raceStreams[indexPath.item];
-    
-    return [[SRHRaceStreamCellViewModel alloc] initWithStream:stream];
 }
 
 @end

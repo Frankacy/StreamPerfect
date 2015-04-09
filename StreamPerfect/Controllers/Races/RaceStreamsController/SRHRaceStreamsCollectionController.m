@@ -8,7 +8,6 @@
 
 #import "SRHRaceStreamsCollectionController.h"
 #import "SRHRaceStreamsViewModel.h"
-#import "SRHRaceStreamCellViewModel.h"
 #import "SRHStreamDetailsViewModel.h"
 #import "SRHStreamDetailsViewController.h"
 #import "SRHRaceStreamsHeader.h"
@@ -134,11 +133,11 @@ NSString* const SRHRaceStreamCellReuseIdentifier = @"SRHRaceStreamCell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SRHRaceStreamCellViewModel *cellViewModel = [self.viewModel viewModelForItemAtIndexPath:indexPath];
+    SRHStream *stream = [self.viewModel itemAtIndexPath:indexPath];
     
     SRHRaceStreamCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:SRHRaceStreamCellReuseIdentifier
-                                                                       forIndexPath:indexPath];
-    cell.viewModel = cellViewModel;
+                                                                             forIndexPath:indexPath];
+    cell.stream = stream;
     
     return cell;
 }

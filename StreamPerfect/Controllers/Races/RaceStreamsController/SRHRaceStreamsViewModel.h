@@ -10,7 +10,6 @@
 
 @class SRHStream;
 @class SRHRace;
-@class SRHRaceStreamCellViewModel;
 
 @interface SRHRaceStreamsViewModel : RVMViewModel
 
@@ -26,6 +25,5 @@
 -(NSInteger)numberOfSections;
 -(NSInteger)numberOfItemsInSection:(NSInteger)section;
 -(SRHStream *)itemAtIndexPath:(NSIndexPath *)indexPath;
--(SRHRaceStreamCellViewModel *)viewModelForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
