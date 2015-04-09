@@ -47,7 +47,6 @@
 		412DB6D11915595900049BC9 /* UIColor+SRHColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6D01915595900049BC9 /* UIColor+SRHColors.m */; };
 		412DB6D7191564C300049BC9 /* SRHStreamsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6D6191564C300049BC9 /* SRHStreamsViewModel.m */; };
 		412DB6DD1915656900049BC9 /* SRHStreamsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6DC1915656900049BC9 /* SRHStreamsCollectionViewController.m */; };
-		412DB6E21915665600049BC9 /* SRHStreamCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6E11915665600049BC9 /* SRHStreamCellViewModel.m */; };
 		412DB6E51915702900049BC9 /* SRHStreamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6E41915702900049BC9 /* SRHStreamCell.m */; };
 		412DB6E8191587E000049BC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412DB6E7191587E000049BC9 /* QuartzCore.framework */; };
 		412DB6ED19159A4200049BC9 /* SRHStreamsCollectionViewController+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 412DB6EC19159A4200049BC9 /* SRHStreamsCollectionViewController+View.m */; };
@@ -65,7 +64,6 @@
 		417B2AA219BBD0D500A177F8 /* sp_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 417B2AA019BBD0D500A177F8 /* sp_logo@2x.png */; };
 		417B2AAA19BBD6E600A177F8 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 417B2AA919BBD6E600A177F8 /* background.png */; };
 		417B2AAD19BBE45700A177F8 /* SRHAttributionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 417B2AAC19BBE45700A177F8 /* SRHAttributionFooterView.m */; };
-		417F493A19BE6CAB00CCC5E5 /* SRHMiniStreamCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 417F493919BE6CAB00CCC5E5 /* SRHMiniStreamCellViewModel.m */; };
 		418957B519B0ED6D00731F91 /* CCBSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 418957B419B0ED6D00731F91 /* CCBSegmentedControl.m */; };
 		418957BE19B0EE4D00731F91 /* camera_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 418957B619B0EE4D00731F91 /* camera_selected@2x.png */; };
 		418957BF19B0EE4D00731F91 /* camera_seleted.png in Resources */ = {isa = PBXBuildFile; fileRef = 418957B719B0EE4D00731F91 /* camera_seleted.png */; };
@@ -190,8 +188,6 @@
 		412DB6D6191564C300049BC9 /* SRHStreamsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHStreamsViewModel.m; sourceTree = "<group>"; };
 		412DB6DB1915656900049BC9 /* SRHStreamsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHStreamsCollectionViewController.h; sourceTree = "<group>"; };
 		412DB6DC1915656900049BC9 /* SRHStreamsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHStreamsCollectionViewController.m; sourceTree = "<group>"; };
-		412DB6E01915665600049BC9 /* SRHStreamCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHStreamCellViewModel.h; sourceTree = "<group>"; };
-		412DB6E11915665600049BC9 /* SRHStreamCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHStreamCellViewModel.m; sourceTree = "<group>"; };
 		412DB6E31915702900049BC9 /* SRHStreamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHStreamCell.h; sourceTree = "<group>"; };
 		412DB6E41915702900049BC9 /* SRHStreamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHStreamCell.m; sourceTree = "<group>"; };
 		412DB6E6191582CC00049BC9 /* Models.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Models.h; sourceTree = "<group>"; };
@@ -222,8 +218,6 @@
 		417B2AA919BBD6E600A177F8 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		417B2AAB19BBE45700A177F8 /* SRHAttributionFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHAttributionFooterView.h; sourceTree = "<group>"; };
 		417B2AAC19BBE45700A177F8 /* SRHAttributionFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHAttributionFooterView.m; sourceTree = "<group>"; };
-		417F493819BE6CAB00CCC5E5 /* SRHMiniStreamCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHMiniStreamCellViewModel.h; sourceTree = "<group>"; };
-		417F493919BE6CAB00CCC5E5 /* SRHMiniStreamCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHMiniStreamCellViewModel.m; sourceTree = "<group>"; };
 		418957B319B0ED6D00731F91 /* CCBSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBSegmentedControl.h; sourceTree = "<group>"; };
 		418957B419B0ED6D00731F91 /* CCBSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBSegmentedControl.m; sourceTree = "<group>"; };
 		418957B619B0EE4D00731F91 /* camera_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_selected@2x.png"; sourceTree = "<group>"; };
@@ -410,10 +404,6 @@
 				412DB6E41915702900049BC9 /* SRHStreamCell.m */,
 				41A22BD3195F975D00497A10 /* SRHMiniStreamCell.h */,
 				41A22BD4195F975D00497A10 /* SRHMiniStreamCell.m */,
-				412DB6E01915665600049BC9 /* SRHStreamCellViewModel.h */,
-				412DB6E11915665600049BC9 /* SRHStreamCellViewModel.m */,
-				417F493819BE6CAB00CCC5E5 /* SRHMiniStreamCellViewModel.h */,
-				417F493919BE6CAB00CCC5E5 /* SRHMiniStreamCellViewModel.m */,
 			);
 			path = StreamCell;
 			sourceTree = "<group>";
@@ -992,7 +982,6 @@
 				412DB6ED19159A4200049BC9 /* SRHStreamsCollectionViewController+View.m in Sources */,
 				4124EA121985678E006242C4 /* SRHSettings.m in Sources */,
 				4155DA37198EA8E200847B17 /* SRHTwitchUser.m in Sources */,
-				417F493A19BE6CAB00CCC5E5 /* SRHMiniStreamCellViewModel.m in Sources */,
 				410B7C4919A1354700FA515E /* SRHRacesTableHeaderView.m in Sources */,
 				410B7C37199EB85700FA515E /* SRHRaceStreamsHeader.m in Sources */,
 				41A8A332191C66D10015F8D7 /* SRHRacesViewModel.m in Sources */,
@@ -1029,7 +1018,6 @@
 				412DB6F51915E4FE00049BC9 /* SRHStreamDetailsViewModel.m in Sources */,
 				412DB6DD1915656900049BC9 /* SRHStreamsCollectionViewController.m in Sources */,
 				412DB6D11915595900049BC9 /* UIColor+SRHColors.m in Sources */,
-				412DB6E21915665600049BC9 /* SRHStreamCellViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

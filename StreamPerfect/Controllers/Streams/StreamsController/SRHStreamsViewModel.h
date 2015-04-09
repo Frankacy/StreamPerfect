@@ -10,7 +10,6 @@
 
 extern NSInteger const SRHFeaturedCellCount;
 
-@class SRHStreamCellViewModel;
 @class SRHStream;
 
 @interface SRHStreamsViewModel : RVMViewModel
@@ -22,6 +21,5 @@ extern NSInteger const SRHFeaturedCellCount;
 -(NSInteger)numberOfSections;
 -(NSInteger)numberOfItemsInSection:(NSInteger)section;
 -(SRHStream *)itemAtIndexPath:(NSIndexPath *)indexPath;
--(RVMViewModel *)viewModelForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

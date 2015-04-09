@@ -8,7 +8,6 @@
 
 #import "SRHStreamsCollectionViewController.h"
 #import "SRHStreamsViewModel.h"
-#import "SRHStreamCellViewModel.h"
 #import "SRHStreamDetailsViewModel.h"
 #import "SRHStreamDetailsViewController.h"
 #import "SRHStreamsCollectionHeader.h"

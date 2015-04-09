@@ -7,8 +7,6 @@
 //
 
 #import "SRHStreamsViewModel.h"
-#import "SRHStreamCellViewModel.h"
-#import "SRHMiniStreamCellViewModel.h"
 #import "SRHStreamsSectionViewModel.h"
 #import "SRHNetworkRequests.h"
 
@@ -84,17 +82,6 @@ NSInteger const SRHFeaturedCellCount = 3;
 -(SRHStream *)itemAtIndexPath:(NSIndexPath *)indexPath {
     SRHStreamsSectionViewModel *viewModel = self.sectionViewModels[indexPath.section];
     return viewModel.streams[indexPath.item];
-}
-
--(RVMViewModel *)viewModelForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SRHStreamsSectionViewModel *viewModel = self.sectionViewModels[indexPath.section];
-    SRHStream *stream = viewModel.streams[indexPath.item];
-    
-    if (indexPath.section == 0) {
-        return [[SRHStreamCellViewModel alloc] initWithStream:stream];
-    } else {
-        return [[SRHMiniStreamCellViewModel alloc] initWithStream:stream];
-    }
 }
 
 -(NSString *)titleForSection:(NSInteger)section {
